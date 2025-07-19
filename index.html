@@ -2,34 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login or create an account for the E-Commerce platform. Shop smart and securely.">
+    <meta name="keywords" content="e-commerce, login, register, online shopping, user account">
+    <title>E-Commerce Login</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <main>
-        <div></div>
-        <div class=" loginpage">
-            <form action="" method="post">
-                <h1>E-commerce Login</h1>
-                <div class=" username">
-                    <label>User Name</label>
-                    <input type="text" name="username" id="username" required>
-                </div>
-                <div class=" password">
-                    <label>Passwrod</label>
-                    <input type="password" name="username" id="username" required>
-                </div>
-                <div class=" forgot_link">
-                    <a>Forgot passwrod?</a>
-                </div>
-                <button type="submit" class=" btn">Login</button>
-            </form>
-        </div>
+        <section class="auth-section">
+            <div class="loginpage">
+                <form action="" method="post" aria-label="Login Form">
+                    <h1>Login to <span> E-Commerce</span></h1>
+                    <div class="username">
+                        <input type="text" name="username" id="login-username" placeholder="User Name" required />
+                    </div>
+                    <div class="password">
+                        <input type="password" name="password" id="login-password" placeholder="Password" required />
+                    </div>
+                    <div class="forgot_link">
+                        <a href="">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn">Lets Go</button>
+                </form>
+            </div>
+
+            <div class="registerpage">
+                <form action="" method="post" aria-label="Registration Form">
+                    <h2>Create E-Commerce Account</h2>
+                    <div>
+                        <label for="firstname">Name</label>
+                        <input type="text" name="firstname" id="firstname" required />
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" required />
+                    </div>
+                    <div>
+                        <label for="register-username">User Name</label>
+                        <input type="text" name="usernamecheck" id="register-username" required />
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
     <meta name="keywords" content="e-commerce, login, register, online shopping, user account">
     <title>E-Commerce Login</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -17,10 +18,12 @@
                 <form action="" method="post" aria-label="Login Form">
                     <h1>Login to <span> E-Commerce</span></h1>
                     <div class="username">
-                        <input type="text" name="username" id="login-username" placeholder="User Name" required />
+                        <input type="text" name="username" class=" inputStyle" id="login-username"
+                            placeholder="User Name" required />
                     </div>
                     <div class="password">
-                        <input type="password" name="password" id="login-password" placeholder="Password" required />
+                        <input type="password" name="password" id="login-password" class=" inputStyle"
+                            placeholder="Password" required />
                     </div>
                     <div class="forgot_link">
                         <a href="">Forgot password?</a>
@@ -31,26 +34,38 @@
 
             <div class="registerpage">
                 <form action="" method="post" aria-label="Registration Form">
-                    <h2>Create E-Commerce Account</h2>
+                    <h1>Create <span>E-Commerce</span> Account</h1>
                     <div>
-                        <label for="firstname">Name</label>
-                        <input type="text" name="firstname" id="firstname" required />
+                        <input type="text" placeholder="Name" class=" inputStyle" name="firstname" id="firstname"
+                            required />
                     </div>
                     <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required />
+                        <input type="email" placeholder="Email" name="email" class=" inputStyle" id="email" required />
                     </div>
                     <div>
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" required />
+                        <input type="tel" placeholder="Phone" name="phone" class=" inputStyle" id="phone" required />
                     </div>
                     <div>
-                        <label for="register-username">User Name</label>
-                        <input type="text" name="usernamecheck" id="register-username" required />
+                        <input type="text" name="usernamecheck" placeholder="User Name" id="register-username"
+                            class=" inputStyle" required />
                     </div>
                     <button type="submit">Sign Up</button>
                 </form>
             </div>
+            <div class="transition_element">
+                <div class="content login-content active">
+                    <h2>Welcome Back!</h2>
+                    <p>Ready to dive back in? Let's get you logged in.</p>
+                    <button onclick="toggleView()">Go to Signup</button>
+                </div>
+
+                <div class="content signup-content de-active">
+                    <h2>Welcome to Our E-Commerce</h2>
+                    <p>Create an account and explore exciting deals. ✨</p>
+                    <button onclick="toggleView()">Go to Login</button>
+                </div>
+            </div>
+
         </section>
     </main>
     <footer>

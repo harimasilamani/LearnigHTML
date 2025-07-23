@@ -2,75 +2,208 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Login or create an account for the E-Commerce platform. Shop smart and securely.">
-    <meta name="keywords" content="e-commerce, login, register, online shopping, user account">
-    <title>E-Commerce Login</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this document or webpage basic tag and implementation of HTML">
+    <title>Learning HTML</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .internalstyle {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <main>
-        <section class="auth-section">
-            <div class="loginpage">
-                <form action="" method="post" aria-label="Login Form">
-                    <h1>Login to <span> E-Commerce</span></h1>
-                    <div class="username">
-                        <input type="text" name="username" class=" inputStyle" id="login-username"
-                            placeholder="User Name" required />
-                    </div>
-                    <div class="password">
-                        <input type="password" name="password" id="login-password" class=" inputStyle"
-                            placeholder="Password" required />
-                    </div>
-                    <div class="forgot_link">
-                        <a href="">Forgot password?</a>
-                    </div>
-                    <button type="submit" class="btn">Lets Go</button>
-                </form>
-            </div>
+    <!-- Heading and Paragraph -->
+    <h1>Heading and paragraph (this is h1)</h1>
+    <h2>section heading h2</h2>
+    <h3>subsection heading h3</h3>
+    <h4>Sub-subsection heading h4</h4>
+    <h5>use under sub-subsection heading h4</h5>
+    <h6>use under h5 heading</h6>
+    <hr>
 
-            <div class="registerpage">
-                <form action="" method="post" aria-label="Registration Form">
-                    <h1>Create <span>E-Commerce</span> Account</h1>
-                    <div>
-                        <input type="text" placeholder="Name" class=" inputStyle" name="firstname" id="firstname"
-                            required />
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email" name="email" class=" inputStyle" id="email" required />
-                    </div>
-                    <div>
-                        <input type="tel" placeholder="Phone" name="phone" class=" inputStyle" id="phone" required />
-                    </div>
-                    <div>
-                        <input type="text" name="usernamecheck" placeholder="User Name" id="register-username"
-                            class=" inputStyle" required />
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-            </div>
-            <div class="transition_element">
-                <div class="content login-content active">
-                    <h2>Welcome Back!</h2>
-                    <p>Ready to dive back in? Let's get you logged in.</p>
-                    <button onclick="toggleView()">Go to Signup</button>
-                </div>
+    <!-- Hyperlink -->
+    <h2>Hyper link</h2>
+    <h3>Email link</h3>
+    <a href="mailto:harmasilamani4gmail.com?cc=sundarhari014@gmail.com&bcc=&subject=newemail&bod=hi hari">Send mail with
+        cc,subject,body</a>
+    <h3>Navigation</h3>
+    <a href="index.html">Navigation to Home page</a>
+    <hr>
 
-                <div class="content signup-content de-active">
-                    <h2>Welcome to Our E-Commerce</h2>
-                    <p>Create an account and explore exciting deals. ✨</p>
-                    <button onclick="toggleView()">Go to Login</button>
-                </div>
-            </div>
+    <!-- Advance texting format -->
+    <h2>Advance text formatting</h2>
 
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 E-Commerce Platform. All rights reserved.</p>
-    </footer>
+    <h3>Blockquote</h3>
+    <blockquote cite="https://referedsitelink">
+        <h4>Below given paragraph refer from MDN</h4>
+        <p>If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from
+            somewhere else, you should wrap it inside a blockquote element to signify this, and include a URL pointing
+            to the source of the quote inside a cite attribute.</p>
+    </blockquote>
+    <h3>inline quotes</h3>
+    <p>refered from MDN - <em><q cite="https://referedsitelink">Inline quotations work in exactly the same way</q></em>
+    </p>
+
+    <h3>Abbreviation</h3>
+    <p>Learning <abbr title="Hypertext Markup Language">HTML</abbr>, this usefull for screen reader</p>
+
+    <h3>Address</h3>
+    <p>if you have contact detail means wrap details in Address tag, it better understand for web browser and screen
+        reader</p>
+    <address>
+        <p><em>Myname <br>House No <br> state</em></p>
+    </address>
+
+    <h3>Superscript and subscript</h3>
+    <p>used for dates formarts, mathemetical formulas, Contact <sup>TM</sup> or 23<sup>th</sup>july or log<sub>2</sub>e
+    </p>
+
+    <h3>Representing computer code</h3>
+    <p>
+        code :<br>
+        <code>System.out.println("Code tag")</code><br>
+        for Keybord key:<kbd>Ctrl</kbd><br>
+        mention given word is varibable name <var>username</var>
+    </p>
+    <pre>
+    maintain all white space
+    hello 
+            every     one
+   </pre>
+    <h3>time and dates</h3>
+    <p>this for machine readable date time format:<time datetime="2025-07-12">12<sup>th</sup> july 2025</time></p>
+    <hr>
+
+    <h3><abbr title="Hypertext Markup Language">HTML</abbr> audio and video</h3>
+    <h4>Audio</h4>
+    <audio controls autoplay muted loop preload="auto">
+        <source src="audio1.mp3">
+        <source src="audio2.fomrat">
+        Your browser does not support the audio element.
+    </audio>
+    <pre><code>
+&lt;audio controls autoplay muted loop preload="auto"&gt;
+  &lt;source src="audio1.mp3""&gt;
+  &lt;source src="audio2.format"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</code></pre>
+    <h3>Video</h3>
+    <video controls autoplay loop preload="auto">
+        <source src="video1.mp4">
+        <source src="video2.webm">
+        <p>Your browser does not support the video element.</p>
+    </video>
+    <pre><code>
+&lt;video controls autoplay muted loop preload="auto"&gt;
+  &lt;source src="video1.mp4""&gt;
+  &lt;source src="video2.webm"&gt;
+  Your browser does not support the video element.
+&lt;/video&gt;
+</code></pre>
+    <hr>
+    <h3>Tables</h3>
+    <table border="1">
+        <caption>School Details</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">S.no</th>
+                <th rowspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Gender</th>
+                <th colspan="2">Education</th>
+            </tr>
+            <tr>
+                <th>School</th>
+                <th>College</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>sundar</td>
+                <td>22</td>
+                <td>Male</td>
+                <td>Govt Hr School</td>
+                <td>tamil nadu</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Praveen</td>
+                <td>22</td>
+                <td>Male</td>
+                <td>Govt Hr School</td>
+                <td>Tamil Nadu</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ajith</td>
+                <td>22</td>
+                <td>Male</td>
+                <td>New School</td>
+                <td>Andrapradesh</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>inline, internal and external <abbr title="casecading style sheet">CSS</abbr></h3>
+    <p style="color: green;">this line is inline style using style attributes</p>
+    <p class=" external">this Extrenal syle</p>
+    <p class=" internalstyle">this internal style this using &lt;style&gt; element </p>
+    <hr>
+    <h3>Images</h3>
+    <h4>img tag</h4>
+    <figure>
+        <img src="https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_1280.jpg" alt="Book Cover"
+            width="300">
+        <figcaption>this img tag inside figure because tell browser this caption belong to the given image about tree
+        </figcaption>
+    </figure>
+    <h4>picture tag</h4>
+    <figure>
+        <picture>
+            <source srcset="https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_1280.jpg"
+                type="image/jpeg">
+            <img src="https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_1280.jpg"
+                alt="Lone tree in nature">
+        </picture>
+        <figcaption>This is a tree image</figcaption>
+    </figure>
+    <hr>
+    <h3>List and types</h3>
+    <h4>unorder list</h4>
+    <p>example: things we need before cook food </p>
+    <ul>
+        <li>rice</li>
+        <li>vegitables</li>
+        <li>water</li>
+        <li>Masala powder</li>
+    </ul>
+    <h4>Ordered list</h4>
+    <p>procedure steps for cooking food</p>
+    <ol>
+        <li>boil the water</li>
+        <li>put vegetables</li>
+        <li>add masalar powde</li>
+        <li>finally add rice</li>
+    </ol>
+    <h4>Data list</h4>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HTML make the structure of web page.</dd>
+
+        <dt>CSS</dt>
+        <dd>CSS apply style on HTML</dd>
+
+        <dt>JavaScript</dt>
+        <dd>JS used communicate interact with web pages</dd>
+    </dl>
+    <hr>
+    <h3>Iframe</h3>
+    <iframe src="http://127.0.0.1:5500/index.html" height="200" width="500" frameborder="0"></iframe>
+    <p></p>
 </body>
 
 </html>

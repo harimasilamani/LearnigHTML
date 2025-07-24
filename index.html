@@ -202,8 +202,169 @@
     </dl>
     <hr>
     <h3>Iframe</h3>
-    <iframe src="http://127.0.0.1:5500/index.html" height="200" width="500" frameborder="0"></iframe>
-    <p></p>
+    <iframe src="http://127.0.0.1:5500/index.html" height="200" width="500" frameborder="0"></iframe><br>
+
+    <!-- input -->
+    <form action="" method="post">
+        <h5>text-input</h5>
+        <label for="firstname">Name</label>
+        <input type="text" name="Name" id="firstname" placeholder=" enter your name" required><br>
+        <h5>Email input</h5>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder=" enter emails" disabled><br>
+        <h5>Number input</h5>
+        <label for="number">Number</label>
+        <input type="number" name="number" id="number" placeholder=" enter number" readonly><br>
+        <h5>range</h5>
+        <label for="range">age</label>
+        <input type="range" name="age" id="range" min="0" max="100" step="2"><br>
+        <h5>checkbox</h5>
+        <input type="checkbox" name="check" id="check">
+        <label for="check">intrested</label><br>
+        <h5>color picker</h5>
+        <input type="color" name="color" id="color">
+        <h5>date select</h5>
+        <input type="date" name="date" id="date" min="2025-07-08">
+        <h5>date and time</h5>
+        <input type="datetime-local" name="datetime" id="datetime">
+        <h5>password</h5>
+        <input type="password" name="password" id="password">
+        <h5>radio</h5>
+        <p>interested sports</p>
+        <label for="cricket">cricket</label>
+        <input type="radio" name="radio" id="cricket">
+        <label for="football">football</label>
+        <input type="radio" name="radio" id="football">
+        <label for="Hockey">Hockey</label>
+        <input type="radio" name="radio" id="Hockey">
+        <h5>get file</h5>
+        <input type="file" name="file" id="file">
+        <h5>week input</h5>
+        <input type="week" name="week" id="week">
+        <h5>time</h5>
+        <input type="time" name="time" id="time">
+        <h5>URL</h5>
+        <input type="url" name="url" id="url" required>
+        <p>select tag</p>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="" selected disabled> select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <h5>text area</h5>
+        <label for="textarea">Feedback</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="5"></textarea>
+        <button type="submit">submit</button>
+        <h5>state</h5>
+        <label for="State">Choose a State:</label>
+        <input list="state" id="State" name="State" placeholder="enter state">
+        <datalist id="state">
+            <option value="Andra">
+            <option value="Maharastra">
+            <option value="TamilNadu">
+            <option value="Kolkata">
+            <option value="Pune">
+        </datalist>
+    </form>
+    <p>This <mark>make tag highlight contetn</mark> and another <strong>strong tag</strong> used for bold font and it
+        semantic tag and <b>b tag</b> it also bold not semantic, same like <em>em tag italic style but its semantic</em>
+        but <i>i tag only for style non semantic</i></p>
+    <!-- Attributes -->
+    <h2>Attributes</h2>
+    <p>"Accept" for use file type image only</p>
+    <input type="file" name="accept" id="imageonly" accept="image/*">
+    <h4>audio only</h4>
+    <input type="file" name="audioonle" id="audioonly" accept="audio/*">
+    <h4>video only</h4>
+    <input type="file" name="videoonle" id="videoonly" accept="video/*">
+
+    <!-- min/max -->
+    <h5>min/max/minlength/maxlength</h5>
+    <form action="" method="post">
+        <input type="number" name="number" min="10" max="100" step="5" required>
+        <input type="text" name="text" id="text" minlength="5" maxlength="10" required>
+        <input type="time" name="time" id="time" step="900" required>
+        <button type="submit">submit</button>
+    </form>
+
+    <!-- multiple -->
+    <h4>multiple</h4>
+    <p>select without multiple</p>
+    <select name="gender">
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+    <p>with multiple</p>
+    <select name="sports" multiple>
+        <option value="cricket">cricket</option>
+        <option value="football">football</option>
+        <option value="tennis">tennis</option>
+        <option value="chess">chess</option>
+    </select>
+
+    <p>multiple file select</p>
+    <input type="file" multiple name="uploads" id="uploads" />
+
+    <p>multiple email select</p>
+    <input type="email" multiple name="emails" id="emails" required />
+
+    <h4>pattern</h4>
+    <form action="" method="post">
+        <label for="numbericpattern">numbericpattern</label>
+        <input type="text" name="text" id="numbericpattern" pattern="[0-9]+" required><br>
+        <label for="Alphanumericpattern">Alphanumericpattern</label>
+        <input type="text" name="text" id="Alphanumericpattern" pattern="[A-Za-z0-9]+" required><br>
+        <label for="Emailvaldation">Email</label>
+        <input type="email" name="em" id="Emailvaldation" pattern="^[a-z0-9\D]+@[a-z]+\.[a-z]{2}" required>
+        <button type="submit">submit</button>
+    </form>
+
+    <h4>Target</h4>
+    <pre>
+    Open in new tab: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Click</a>
+    Open _self in same tab: <a href="https://example.com" target="_self">Click</a>
+    Open _parent in parent: <a href="https://example.com" target="_parent">Click</a>
+    Open in top: <a href="https://example.com" target="_top">Click</a>
+    </pre>
+    <h4>contenteditable</h4>
+    <p contenteditable="true">this paragraph have contenteditable is true attribute so its editable for user</p>
+
+    <h4>direction</h4>
+    <p dir="rtl">content in right side</p>
+    <p dir="ltr">content in left side</p>
+    <p dir="auto">browser adjust the text pased on text Language</p>
+
+    <h4>draggable</h4>
+    <p draggable="true">i can drag this content using draggable attribute</p>
+
+    <h4>hidden</h4>
+    <p>below paragraph everyone word hide</p>
+    <p>hello <span hidden>everyone</span></p>
+
+    <h4>itemscope,itemref,itemtype,itemid</h4>
+
+    <details itemscope itemtype="https://schema.org/Person" itemid="#person-0001">
+        <summary>person details</summary>
+        <pre>
+            <span itemprop="name">sundar</span>
+            <span itemprop="age">22</span>
+        </pre>
+    </details>
+
+    <h4>lang</h4>
+    <p lang="en">mention inside content of element which Language like english, french</p>
+
+    <h4>Popover</h4>
+    <button type="button" popovertarget="popover">show infotmation</button>
+    <p popover="auto" id="popover"> this information show like transparent modal</p>
+
+    <h4>spellcheck</h4>
+    <p>spell check false</p>
+    <textarea name="spellfalse" id="spellfalse" spellcheck="false"></textarea>
+    <p>spell check true</p>
+    <textarea name="spelltrue" id="spelltrue" spellcheck="true"></textarea>
+
 </body>
 
 </html>

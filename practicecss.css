@@ -1,0 +1,224 @@
+/* Text & Header */
+#textandcolor {
+    border: 2px solid gray;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+#textandcolor h2 {
+    margin: 0px;
+    padding: 5px;
+    border-bottom: 2px solid gray;
+    background-color: royalblue;
+    color: white;
+}
+
+.textproperties h3 {
+    text-transform: capitalize;
+    margin: 20px 10px;
+}
+
+details {
+    margin: 10px;
+    border: 1px solid green;
+}
+
+details summary {
+    font-size: larger;
+    color: white;
+    padding: 5px 10px;
+    font-weight: 500;
+    background: gray;
+}
+
+details ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+details ol li {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+/* text-decoration */
+/* text-decoration: text-decoration-line || text-decoration-style || text-decoration-color || text-decoration-thickness; */
+
+.Text-decoration ol li:nth-of-type(1) {
+    text-decoration: underline;
+}
+
+.Text-decoration ol li:nth-of-type(2) {
+    text-decoration: line-through wavy;
+}
+
+.Text-decoration ol li:nth-of-type(3) {
+    text-decoration: underline double blue 3px;
+}
+
+/* text-align properties */
+.Text-align ol li:nth-of-type(1) {
+    text-align: right;
+}
+
+.Text-align ol li:nth-of-type(2) {
+    text-align: center;
+}
+
+.Text-align ol li:nth-of-type(3) {
+    text-align: left;
+}
+
+/* text-shadow */
+.Text-shadow ol li:nth-of-type(1) {
+    text-shadow: 0px 0px 5px gray;
+    color: gray;
+    font-size: medium;
+}
+
+/* text-transform */
+.Text-transform ol li:nth-of-type(1) {
+    text-transform: uppercase;
+}
+
+.Text-transform ol li:nth-of-type(2) {
+    text-transform: lowercase;
+}
+
+.Text-transform ol li:nth-of-type(3) {
+    text-transform: capitalize;
+}
+
+/* text-wrap */
+.Text-wrap ol li:nth-of-type(1) {
+    text-wrap: wrap;
+}
+
+/* .Text-wrap ol li:nth-of-type(2) {
+    text-wrap: nowrap;
+} */
+
+.Text-emphasis ol li:nth-of-type(1) {
+    text-emphasis: filled double-circle yellow;
+}
+
+.text-orientation {
+    padding: 0px 10px 10px 10px;
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+}
+
+/* font-properties */
+.font-properties {
+    padding: 0px;
+    margin: 10px 10px;
+    list-style: none;
+}
+
+.font-properties li {
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 15px;
+}
+
+.font-properties li:nth-of-type(odd) {
+    background-color: rgb(190, 190, 190);
+}
+
+.font-properties li:nth-of-type(1) {
+    font-weight: bolder;
+}
+
+.font-properties li:nth-of-type(2) {
+    font-size: x-large;
+}
+
+.font-properties li:nth-of-type(3) {
+    font-style: italic;
+}
+
+.font-properties li:nth-of-type(4) {
+    font-family: monospace;
+}
+
+/* Other Properties */
+.otherproperties {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 0px 10px 10px 10px;
+}
+
+.otherproperties p {
+    border: 1px solid royalblue;
+    padding: 10px;
+    margin: 0px;
+}
+
+.otherproperties p:nth-of-type(1) {
+    letter-spacing: 10px;
+}
+
+.otherproperties p:nth-of-type(2) {
+    word-spacing: 20px;
+}
+
+.otherproperties p:nth-of-type(3) {
+    word-wrap: break-word;
+}
+
+.otherproperties p:nth-of-type(4) {
+    line-height: 10px;
+}
+
+.otherproperties p:nth-of-type(5) {
+    white-space: pre-wrap;
+}
+
+.otherproperties p:nth-of-type(6) {
+    word-break: break-all;
+}
+
+/* backgroundproperties */
+#backgroundproperties {
+    border: 2px solid gray;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+#backgroundproperties h2 {
+    background-color: green;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 2px solid gray;
+}
+
+#backgroundproperties h3 {
+    margin: 10px;
+}
+
+/* background: lightblue url('example.jpg') no-repeat center/cover fixed; */
+#backgroundproperties .Background {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    margin: 10px;
+    background-size: contain;
+    font-size: x-large;
+    height: 100px;
+    overflow-y: auto;
+    background: royalblue url("https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_1280.jpg") no-repeat center;
+}
+
+#backgroundproperties .Backgroundclip {
+    background: url("https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_1280.jpg") no-repeat center;
+    background-size: cover;
+    background-clip: text;
+    font-size: x-large;
+    margin: 0;
+    font-weight: bold;
+    padding: 10px;
+    color: transparent;
+}

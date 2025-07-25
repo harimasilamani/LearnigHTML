@@ -89,13 +89,164 @@
             <h2>Background Properties</h2>
             <h3>background color,image, repeat,attachement,position</h3>
             <p class="Background">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, ipsam omnis! Laudantium consectetur aperiam similique totam a, ipsam minima fugiat maiores reiciendis saepe quisquam quos iste consequatur nihil est sit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad laboriosam sit necessitatibus iure. Voluptates maxime, sunt ad a non mollitia excepturi voluptatem repudiandae dolor aut modi optio quos delectus?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, ipsam omnis! Laudantium consectetur
+                aperiam similique totam a, ipsam minima fugiat maiores reiciendis saepe quisquam quos iste consequatur
+                nihil est sit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad laboriosam sit
+                necessitatibus iure. Voluptates maxime, sunt ad a non mollitia excepturi voluptatem repudiandae dolor
+                aut modi optio quos delectus?
             </p>
             <h3>background clip</h3>
             <p class="Backgroundclip">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, ipsam omnis! Laudantium consectetur aperiam similique totam a, ipsam minima fugiat maiores reiciendis saepe quisquam quos iste consequatur nihil est sit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad laboriosam sit necessitatibus iure. Voluptates maxime, sunt ad a non mollitia excepturi voluptatem repudiandae dolor aut modi optio quos delectus?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, ipsam omnis! Laudantium consectetur
+                aperiam similique totam a, ipsam minima fugiat maiores reiciendis saepe quisquam quos iste consequatur
+                nihil est sit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad laboriosam sit
+                necessitatibus iure. Voluptates maxime, sunt ad a non mollitia excepturi voluptatem repudiandae dolor
+                aut modi optio quos delectus?
             </p>
         </div>
+    </section>
+    <section id="Selectors">
+        <div>
+            <h2>CSS Selectors , combinator, pseudo classes, pseudo element</h2>
+            <h3 style="margin: 10px 10px;">Selectors</h3>
+            <p class="classSelector">Using Class name style the element</p>
+            <p id="idselector">Using ID name style the element</p>
+            <textarea placeholder="Using element name style the element"></textarea>
+            <p>universal (*) selector for apply all element</p>
+            <p title="hello"><a href="">Using Attributes style the element</a></p>
+        </div>
+        <div class=" Combinator">
+            <h3 style="margin: 10px 10px;">Combinator</h3>
+            <p class="childcombinator">Child Combinator:<span>span one <span>hello everyone</span>&nbsp;</span><i>new
+                    style</i><span>span two</span>&nbsp;<span>span three</span></p>
+            <p class="Descendantcombinator">Descendant Combinator:<span>span one <span>hello
+                        everyone</span>&nbsp;</span><i>new style</i><span>span two</span>&nbsp;<span>span three</span>
+            </p>
+            <p class="nextcombinator">Next-sibiling Combinator:<span>span one</span>&nbsp;<i>new</i><span>span
+                    two</span>&nbsp;<span>span three</span></p>
+            <p class="subsequentcombinator"> Subsequent-sibling Combinator:<span>span one</span>&nbsp;<span>span
+                    two</span>&nbsp;<i>new</i><span>span three</span></p>
+        </div>
+        <div class="pseudoclass">
+            <h3 style="margin: 10px 10px;">Pseudo Class</h3>
+            <p>
+                <a href="/" target="_blank">
+                    This link has active, visited, hover effect
+                </a>
+            </p>
+            <form>
+                <div>
+                    <input type="checkbox" name="checkbox" id="inputcheck">
+                    <label for="inputcheck">clickme</label>
+                    <span>When click checked class triggered then color will change</span>
+                </div>
+                <div>
+                    <span>focus,disabled class</span>
+                    <input type="text" id="disabledtext" disabled placeholder=" this text input disabled">
+                    <label for="focus">focus input: <input type="text" name="focus" id="focus"></label>
+                </div>
+                <fieldset class="validinvalid">
+                    <div>
+                        <label for="valid">:valid/:invalid</label>
+                        <input type="text" name="valid" id="valid" pattern="[A-Za-z0-9]+"
+                            placeholder=" only use Alphanumericpattern">
+                    </div>
+                    <div>
+                        <label for="user-valid">:user-valid/:user-invalid</label>
+                        <input type="email" name="user-valid" id="user-valid" placeholder="example@gmail.com">
+                    </div>
+                </fieldset>
+            </form>
+            <h3 style="margin: 10px 10px;">first-child / last-child</h3>
+            <ul class=" typeOfpseudoclasses">
+                <li>first-child its onyl works the given element first child of the parent element</li>
+                <li>second-child</li>
+                <li>last-child, its only works the given element last child of the parent element</li>
+            </ul>
+            <h3 style="margin: 10px 10px;">first-of-type / last-of-type</h3>
+            <div class=" first_lastoftype">
+                <div>first child of the element if using p tag first-of-type it trigger the first appeareance of p tag
+                    in parent not the element was first child </div>
+                <p>second-child</p>
+                <p>third-child</p>
+                <p>fourth-child</p>
+                <div>last child of the element if using p tag last-of-type it trigger the last appeareance of p tag in
+                    parent not the element was last child </div>
+            </div>
+            <h3 style="margin: 10px 10px;">nth-child / nth-last-child / nth-of-type / nth-of-last-child</h3>
+            <ul class=" nthoftypesclasses">
+                <li>item 1 (nth-child/nth-last-child work based on child position)</li>
+                <li>item 2 (nth-of-type/nth-last-of-type work based tag position based in a parent)</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+                <li>item 8</li>
+                <li>item 9</li>
+                <li>item 10</li>
+            </ul>
+            <h3 style="margin: 10px 10px;">Pseudo Elements -
+                ::before,::after,::selection,::first-letter,::first-line,::marker</h3>
+            <p class=" pseudoelement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae consequatur,
+                praesentium expedita similique corporis sit architecto dicta excepturi natus iusto atque soluta,
+                nesciunt, sapiente delectus. Eius quibusdam nesciunt enim ipsa.
+            </p>
+            <ul class="markerelement">
+                <li>Marker pseudo element</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </div>
+
+    </section>
+    <section id="flexbox">
+        <h2>Flex and Flex Properties</h2>
+        <div class="flexbox_properties">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+        </div>
+        <h3 style="margin: 10px 10px;">Flex - justifycontent, align-items, align-self</h3> 
+        <div class="flexbox_properties2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+        </div> 
+        <h3 style="margin: 10px 10px;">Flex - flex,flex-grow,flex-shrink,flex-basis</h3> 
+        <div class="flexbox_properties3">
+            <div class=" properties1">
+                <div>Item 1</div>
+                <div>Item 2</div>
+            </div>
+            <div class=" properties2">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+            </div>
+            <div class=" properties3">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+            </div>
+        </div> 
     </section>
 </body>
 

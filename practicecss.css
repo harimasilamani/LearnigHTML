@@ -1,5 +1,7 @@
 /* Text & Header */
-#textandcolor {
+#textandcolor,
+#Selectors,
+#flexbox {
     border: 2px solid gray;
     margin: 10px;
     box-sizing: border-box;
@@ -221,4 +223,344 @@ details ol li {
     font-weight: bold;
     padding: 10px;
     color: transparent;
+}
+
+/* selectors css */
+#Selectors h2 {
+    margin: 0px;
+    padding: 10px;
+    background-color: brown;
+    color: aliceblue;
+    border-bottom: 2px solid gray;
+}
+
+#Selectors div p {
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+}
+
+.classSelector {
+    background-color: orangered;
+    color: white;
+}
+
+#idselector {
+    background-color: aquamarine;
+    color: gray;
+}
+
+p[title="hello"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: larger;
+    font-style: italic;
+}
+
+textarea {
+    width: 50%;
+    margin: 0px 10px;
+}
+
+textarea::placeholder {
+    font-size: larger;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+/* Combinator */
+.childcombinator span {
+    background: wheat;
+}
+
+.childcombinator>span {
+    color: green;
+    background: #000;
+}
+
+.Descendantcombinator span {
+    color: yellow;
+    background-color: azure;
+}
+
+.nextcombinator span+span {
+    color: red;
+    font-weight: bold;
+}
+
+.subsequentcombinator span~span {
+    color: yellowgreen
+}
+
+/* pseudo classes */
+.pseudoclass p:first-of-type a:active {
+    color: royalblue;
+}
+
+.pseudoclass p:first-of-type a:hover {
+    text-shadow: 0px 0px 10px gray;
+}
+
+.pseudoclass p:first-of-type a:visited {
+    color: gray;
+}
+
+.pseudoclass form div,
+.pseudoclass form fieldset {
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+#inputcheck:checked~span {
+    color: green;
+}
+
+#disabledtext:disabled {
+    background: rgb(112, 112, 112);
+    border: 2px dotted black;
+    padding: 5px;
+}
+
+#disabledtext:disabled::placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+
+.pseudoclass form div:nth-of-type(2) label:focus-within {
+    color: green
+}
+
+.pseudoclass form div:nth-of-type(2) input:focus {
+    background: green;
+}
+
+#valid,
+#user-valid {
+    padding: 10px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    border: 2px solid transparent
+}
+
+:is(#valid, #user-valid):focus {
+    outline: none;
+    box-shadow: 0px 0px 10px gray;
+}
+
+#valid:valid {
+    border-color: rgb(0, 142, 0);
+    background-color: rgb(0, 142, 0, 0.2);
+    color: rgb(0, 142, 0);
+}
+
+#valid:invalid {
+    border-color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0, 0.2);
+    color: rgb(255, 0, 0);
+}
+
+#user-valid:user-valid {
+    border-color: rgb(0, 142, 0);
+    background-color: rgb(0, 142, 0, 0.2);
+    color: rgb(0, 142, 0);
+}
+
+#user-valid:user-invalid {
+    border-color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0, 0.2);
+    color: rgb(255, 0, 0);
+}
+
+.typeOfpseudoclasses,
+.nthoftypesclasses {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.typeOfpseudoclasses li,
+.first_lastoftype p,
+.first_lastoftype div,
+.nthoftypesclasses li {
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+}
+
+.typeOfpseudoclasses li:first-child {
+    background: #ff0055;
+    color: aliceblue;
+}
+
+.typeOfpseudoclasses li:last-child {
+    background-color: #00ff11;
+}
+
+.first_lastoftype p:first-of-type {
+    background-color: rgb(192, 192, 129);
+}
+
+.first_lastoftype p:last-of-type {
+    background-color: rgb(129, 182, 192);
+}
+
+/* nth-child */
+.nthoftypesclasses li:nth-child(even) {
+    background-color: rgb(235, 235, 235);
+}
+
+.nthoftypesclasses li:nth-child(odd) {
+    background-color: rgba(47, 47, 47, 0.322);
+}
+
+.nthoftypesclasses li:nth-child(2n) {
+    text-shadow: 0px 0px 2px #ce1553;
+}
+
+.nthoftypesclasses li:nth-child(-n+3) {
+    font-weight: bolder;
+}
+
+.nthoftypesclasses li:nth-last-child(4) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nthoftypesclasses li:nth-last-child(-n+2) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nthoftypesclasses li:nth-of-type(3) {
+    background-color: #4e8151;
+}
+
+.nthoftypesclasses li:nth-last-of-type(3) {
+    background-color: #564e81;
+}
+
+/* Pseduo element */
+.pseudoelement::before {
+    content: "this Before element";
+    font-size: large;
+    color: #ff0055;
+}
+
+.pseudoelement::after {
+    content: "this after element";
+    font-size: large;
+    color: #ff0055;
+}
+
+.pseudoelement::first-letter {
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.pseudoelement::first-line {
+    color: #4e8151;
+}
+
+.pseudoelement::selection {
+    background: #ff0055;
+    color: white;
+}
+
+.markerelement {
+    border: 1px solid gray;
+    margin: 10px;
+}
+
+.markerelement li::marker {
+    content: "🎶 ";
+}
+
+
+/* Flex and properties */
+
+#flexbox h2 {
+    border: 2bx solid gray;
+    background: #ce1553;
+    color: #fff;
+    margin: 0px;
+    padding: 10px;
+}
+
+.flexbox_properties {
+    margin: 10px;
+    border: 1px solid rgb(73, 71, 71);
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.flexbox_properties div {
+    border: 2px dotted rgb(65, 105, 225);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.flexbox_properties2 {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.flexbox_properties2 div {
+    border: 2px dotted rgb(7, 70, 7);
+    padding: 10px;
+    width: 100%;
+}
+
+.flexbox_properties2 div:nth-child(2) {
+    align-self: flex-end;
+}
+
+.flexbox_properties2 div:nth-child(4) {
+    align-self: flex-start;
+}
+
+.flexbox_properties2 div:nth-child(6) {
+    align-self: flex-end;
+}
+
+.flexbox_properties3 {
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.flexbox_properties3 :is(.properties1,.properties2,.properties3 ){
+    display: flex;
+    gap: 10px;
+}
+
+.flexbox_properties3 :is(.properties1,.properties2,.properties3) div {
+    border: 2px double #00fbff;
+    background: linear-gradient(to top left, #848484, #fff);
+    padding: 10px;
+}
+
+.flexbox_properties3 .properties1 div:nth-child(2) {
+    flex: 1;
+}
+
+.properties2{
+    margin: 10px 0px;
+}
+.properties2 div:nth-child(2){
+    flex:1 2 200px;
+    box-sizing: border-box;
+}
+.properties3 div{
+    width: 500px;
 }

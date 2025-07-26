@@ -1,13 +1,15 @@
 /* Text & Header */
 #textandcolor,
 #Selectors,
-#flexbox {
+#flexbox,
+#gridlayout,
+#cssfunction {
     border: 2px solid gray;
     margin: 10px;
     box-sizing: border-box;
 }
 
-#textandcolor h2 {
+:is(#textandcolor, #cssfunction) h2 {
     margin: 0px;
     padding: 5px;
     border-bottom: 2px solid gray;
@@ -539,12 +541,12 @@ textarea::placeholder {
 
 }
 
-.flexbox_properties3 :is(.properties1,.properties2,.properties3 ){
+.flexbox_properties3 :is(.properties1, .properties2, .properties3) {
     display: flex;
     gap: 10px;
 }
 
-.flexbox_properties3 :is(.properties1,.properties2,.properties3) div {
+.flexbox_properties3 :is(.properties1, .properties2, .properties3) div {
     border: 2px double #00fbff;
     background: linear-gradient(to top left, #848484, #fff);
     padding: 10px;
@@ -554,13 +556,169 @@ textarea::placeholder {
     flex: 1;
 }
 
-.properties2{
+.properties2 {
     margin: 10px 0px;
 }
-.properties2 div:nth-child(2){
-    flex:1 2 200px;
+
+.properties2 div:nth-child(2) {
+    flex: 1 2 200px;
     box-sizing: border-box;
 }
-.properties3 div{
-    width: 500px;
+
+.properties3 {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.properties3 div {
+    width: 100px;
+}
+
+/* grid properties */
+#gridlayout h2 {
+    margin: 0px;
+    padding: 10px;
+    background: rgb(25, 55, 128);
+    color: #fff;
+    border-bottom: 2px solid gray;
+}
+
+.gridproperties {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 40px 100px 50px;
+    gap: 10px;
+}
+
+.gridproperties div {
+    border: 2px solid rgb(0, 22, 90);
+    background: linear-gradient(to right, rgb(0, 22, 90), white, rgb(0, 22, 90));
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gridproperties div:nth-child(3) {
+    grid-column: 3/ 2 span;
+    grid-row: 1/2 span;
+}
+
+.gridproperties div:first-child {
+    grid-area: 1/1/2 span/2 span;
+}
+
+.gridproperties div:last-child {
+    grid-column: 2/3 span;
+}
+
+/* Column layout */
+#columnlayout {
+    border: 1px solid gray;
+    padding: 10px;
+    columns: 4 200px;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
+    color-scheme: light dark;
+}
+
+/* Media Qureies */
+#mediaqueries {
+    border: 3px solid rgb(0, 22, 90);
+    margin: 10px 0px;
+    background-color: rgb(0, 22, 90, 0.2);
+    padding: 10px;
+}
+
+@media (min-width:480px) and (max-width:782px) {
+    #mediaqueries {
+        border: 3px solid rgb(0, 62, 0);
+        background-color: rgba(143, 240, 164, 0.2);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f0f0f0;
+    }
+}
+
+@media print {
+    .print {
+        padding: 10px;
+        border: 1px solid gray;
+        background-color: #00165a;
+        color: whitesmoke;
+    }
+}
+
+/* CSS FUNCTION */
+:root {
+    --primary-color: rgba(20, 135, 130);
+}
+
+.varfcuntion {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid rgb(36, 36, 37);
+    margin: 10px;
+    padding: 10px;
+}
+
+.calcfunction {
+    width: calc(100% - 100px);
+    box-sizing: border-box;
+    background: lightcoral;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+.clampfunction {
+    border: 2px solid rgba(143, 240, 164, 0.2);
+    padding: 5px;
+    margin: 10px;
+}
+
+.clampfunction p {
+    font-size: clamp(16px, 2vw, 32px);
+    background-color: #00165a;
+    margin: 0px;
+    padding: 10px;
+    color: #fff;
+}
+.minfunction{
+    width: min(90%, 600px);
+    background-color: rgb(112, 38, 30);
+    color: white;
+    padding: 10px;
+    transform: scale(0.9) translate(50%,10px) ;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.maxfunction{
+    width: max(10px, 50px);
+    background-color: goldenrod;
+    color: white;
+    transform: rotate(15deg);
+    padding: 10px;
+    margin: 10px;
+}
+
+.matrixfunction{
+    border: 1px solid black;
+    padding: 10px;
+margin: 10px;
+    height: 200px;
+}
+.matrixfunction p{
+    padding: 10px;
+    background-color: #00165a;
+    width: fit-content;
+    color: white;
+    transform: matrix(2,1,1.2,3,200,60); 
+
 }

@@ -1,0 +1,11 @@
+#boxwebanimation {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(202, 199, 199);
+}
+.webanimation{
+    width: 100%;
+}
+.webanimation button {
+    margin: 10px;
+}

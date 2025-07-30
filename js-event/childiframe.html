@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iframe Window</title>
+</head>
+
+<body>
+    <h2>Iframe Window</h2>
+    <button id="replyMessage">Reply to Parent</button>
+    <p id="childMessage">Message from parent will appear here.</p>
+    <script>
+        const messagePara = document.getElementById('childMessage');
+        window.addEventListener("message", (event) => {
+            console.log(event);
+            messagePara.textContent = `From parent: ${event.data}`;
+        });
+        document.getElementById('replyMessage').addEventListener('click', () => {
+            window.parent.postMessage("this message send from iframe", "*");
+        });
+        window.addEventListener("messageerror", (event) => {
+            console.error("error", event);
+        });
+    </script>
+</body>
+
+</html>

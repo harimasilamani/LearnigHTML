@@ -28,22 +28,21 @@ httprequest.onload = function () {
 const inputfile = document.getElementById("file");
 const previewimage = document.getElementsByClassName("previewimage")[0];
 const imagepreview = document.createElement("img");
-imagepreview.style.width="500px";
-imagepreview.style.height="500px"
+imagepreview.style.width = "500px";
+imagepreview.style.height = "500px"
 inputfile.addEventListener("change", function (event) {
     const file = event.target.files[0];
     if (!file) {
         alert("No image selected");
     }
     const filereader = new FileReader();
-
+    filereader.readAsDataURL(file);
     filereader.onload = () => {
-        imagepreview.src = filereader.result; 
+        imagepreview.src = filereader.result;
     };
     filereader.onerror = () => {
         alert("Error loading image");
     };
-    filereader.readAsDataURL(file); 
     previewimage.append(imagepreview);
 });
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Event</title>
+    <link rel="stylesheet" href="jsevent.css">
+</head>
+
+<body>
+    <!-- web animation -->
+    <h2>Web animation API</h2>
+    <div class="webanimation">
+        <div id="boxwebanimation"></div>
+        <button type="button" class="animationPlay">play</button>
+        <button type="button" class="animationPause">pause</button>
+        <button type="button" class="animationCancel">cancel</button>
+        <button type="button" class="animationReverse">reverse</button>
+    </div>
+    <hr>
+    <!-- async abortsignal, xmlhtmlrequest -->
+    <h2>Asynchronous data fetching</h2>
+    <div class="asynchronous_data_fetching">
+        <table class="tablefetchdata" border="1"></table>
+    </div>
+    <hr>
+    <h2>File reader</h2>
+    <input type="file" name="file" id="file" accept="image/*">
+    <div class="previewimage">
+    </div>
+    <hr>
+    <!-- clipboard -->
+    <h2>Clipboard Event</h2>
+    <input type="text" class="copyinput" placeholder="write and copy text">
+    <input type="text" class="pasteinput">
+    <button type="button" class="copybutton">copy button</button>
+    <button type="button" class="pastebutton">paste button</button><br>
+    <img id="copyimage" src="image.png" width="300" height="200">
+    <img id="pasteimage" style="border: 1px solid gray;margin-top: 30px;" width="300" height="200">
+    <hr>
+    <!-- compostion track the asian language or emoji -->
+    <input type="text" id="compositioninput" placeholder="write emoji or other chinese langs">
+    <pre id="printlang">below  print chinese and emoji:
+    </pre>
+    <hr>
+    <!-- web storage -->
+    <h2>web storage</h2>
+    <form id="storageform">
+        <input type="text" name="username" id="username" required>
+        <input type="email" name="email" id="email" required>
+        <button type="submit">save</button>
+        <button type="reset">reset</button>
+    </form>
+    <button type="button" class="printvalue">print</button>
+    <pre id="userdata"></pre>
+    <button type="button" class="clear">clear</button>
+    <hr>
+    <!-- drag and drop -->
+    <h2>Drag and drop</h2>
+    <p id="draggablepara" draggable="true">drag this line</p>
+    <div id="dropbox">drophere</div>
+    <hr>
+    <!-- focus event -->
+    <h2>Focus Event</h2>
+    <div id="parentelement">
+        <input type="text" id="input1"><br>
+        <input type="text" id="input2">
+    </div>
+    <p class="logfocustevent"></p>
+    <hr>
+    <!-- Keyboard event -->
+    <h2>Keyboard events</h2>
+    <input type="text" name="Keybord" id="Keyboardeventinput" placeholder="hello" required maxlength="20">
+    <pre id="logeventkeyboard"></pre>
+    <hr>
+    <!-- Mouse Event -->
+    <h2>Mouse Event</h2>
+    <p id="mouseevent">hover the mouse on this para click, double click, rightclick</p>
+    <pre id="mouselog"></pre>
+    <hr>
+    <!-- geolocation -->
+    <h2>Geolocation</h2>
+    <button id="getlocation">get location</button>
+    <button id="watchlocation">start tracking</button>
+    <button id="clearlocation">stop tracking</button>
+    <pre id="outputlocation"></pre>
+    <hr>
+    <!-- print js event after/before -->
+    <h2>print event</h2>
+    <div class=" printcontent">
+        <p class="disapper">this paragraph after print the screen means disapeared</p>
+        <button type="button" onclick="window.print()">print the page</button>
+    </div>
+    <hr>
+    <!-- full screen in/out -->
+    <h2>full screen event</h2>
+    <button type="button" id="fullscreen">Click to Fullscreen</button>
+    <p id="fullscreenlog"></p>
+    <hr>
+    <!-- selectionchange -->
+    <h2>selection changes</h2>
+    <textarea name="selectionchange" id="selectionchange"></textarea>
+    <pre id="selectdata"></pre>
+    <hr>
+    <!-- message event parent to iframe -->
+    <h2>Parent Window</h2>
+    <button id="sendMessage">Send Message to iframe</button>
+    <p id="parentMessage">Message from iframe</p>
+    <iframe id="childFrame" src="childiframe.html" width="400" height="150" style="border: 1px solid black;"></iframe>
+    <hr>
+    <!-- websocket -->
+    <h2>web socket</h2>
+    <input type="text" id="socketmessagesend"><button type="button" id="sendmessage">send message</button>
+    <p class="socketstatus">socket not connected</p>
+    <pre id="messagepreview"></pre>
+    <button type="button" id="connectsocket">connect</button>
+    <button type="button" id="closesocket">close</button>
+    <hr>
+    <h2>Web Workers</h2>
+    <p>enter number generate means those items will generate</p>
+    <input type="number" id="countInput">
+    <button id="generatelist">generate list</button>
+    <p id="statuslistdata">No list generated</p>
+    <ul id="outputlist"></ul>
+    <h2>Media recorder</h2>
+    <video id="recordvideopreview" width="300" height="200" autoplay></video>
+    <button type="button" id="recordbutton">Start Recording</button>
+    <button type="button" id="pausebutton">Pause</button>
+    <button type="button" id="stopbutton">Stop</button>
+    <a id="downloadlink" download="videodownload.webm" style="display: none;">Download Video</a>
+    <hr>
+    <script type="module" src="webstorage.js"></script>
+    <script type="module" src="composition.js"></script>
+    <script type="module" src="animation.js"></script>
+    <script type="module" src="asynchronusdatafetch.js"></script>
+    <script type="module" src="clip-board.js"></script>
+    <script type="module" src="draganddrop.js"></script>
+    <script type="module" src="focusevent.js"></script>
+    <script type="module" src="keyboardevent.js"></script>
+    <script type="module" src="mouseevent.js"></script>
+    <script type="module" src="geolocation.js"></script>
+    <script type="module" src="fullscreenevent.js"></script>
+    <script type="module" src="htmlselection.js"></script>
+    <script type="module" src="promiserejection.js"></script>
+    <script type="module" src="messageevent.js"></script>
+    <script type="module" src="webscoket.js"></script>
+    <script type="module" src="webworkers.js"></script>
+    <script type="module" src="mediarecord.js"></script>
+</body>
+
+</html>

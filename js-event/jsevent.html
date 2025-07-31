@@ -130,6 +130,30 @@
     <button type="button" id="stopbutton">Stop</button>
     <a id="downloadlink" download="videodownload.webm" style="display: none;">Download Video</a>
     <hr>
+    <h2>index data base</h2>
+    <form action="" method="post" id="submitdata">
+        <label for="formname">
+            Name
+            <input type="text" id="formname" required>
+        </label>
+        <label for="formgender">
+            Gender
+            <select name="gender" id="formgender" required>
+                <option value="" disabled selected>selected gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </label>
+        <button type="submit">save</button>
+    </form>
+    <table id="usertabledata" border="1">
+        <thead>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </thead>
+        <tbody></tbody>
+    </table>
     <script type="module" src="webstorage.js"></script>
     <script type="module" src="composition.js"></script>
     <script type="module" src="animation.js"></script>
@@ -147,6 +171,7 @@
     <script type="module" src="webscoket.js"></script>
     <script type="module" src="webworkers.js"></script>
     <script type="module" src="mediarecord.js"></script>
+    <script type="module" src="idbdatabase.js"></script>
 </body>
 
 </html>

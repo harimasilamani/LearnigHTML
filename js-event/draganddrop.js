@@ -21,7 +21,7 @@ droparea.addEventListener("dragleave", () => {
 });
 droparea.addEventListener("drop", (event) => {
   event.preventDefault();
-  const draggedId = e.dataTransfer.getData("text/plain");
+  const draggedId = event.dataTransfer.getData("text/plain");
   const draggedEl = document.getElementById(draggedId);
   droparea.appendChild(draggedEl);
 });

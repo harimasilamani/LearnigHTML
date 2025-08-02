@@ -16,5 +16,5 @@ genratebutton.addEventListener('click', () => {
 worker.onmessage = (e) => {
     const data = e.data;
     statuslist.textContent = `total ${data.length} itemsgenerated`;
-    output.innerHTML = data.map(item => `<li>${item.name} -</li>`).join('');
+    output.innerHTML = data.map(item => `<li>${item.name}</li>`).join('');
 };

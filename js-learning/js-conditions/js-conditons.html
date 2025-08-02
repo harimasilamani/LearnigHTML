@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript conditions</title>
+</head>
+
+<body>
+    <h2>Java Script Conditions</h2>
+    <p>Enter Number 1 to 7</p>
+    <small>1-Sunday, 2-Monday, 3-Tuesday, 4-Wednesday, 5-Thursday, 6-Friday, 7-Saturday</small><br>
+    <input type="number" name="number" id="numberinput" min="1" max="7" required><br>
+    <output class="weekdays"></output>
+    <hr>
+    <h2>matrix print</h2>
+    <input type="number" id="matrixinput">
+    <pre class="logmatrix"></pre>
+    <hr>
+    <h2>ternariy operator</h2>
+    <pre>conditon?"if true":"if false"</pre>
+    <input type="number" name="check" id="inputNumone">
+    <input type="number" name="checknum" id="inputNumtwo">
+    <button type="button" onclick="arthemeticfunction('sum')">+</button>
+    <button type="button" onclick="arthemeticfunction('sub')">-</button>
+    <button type="button" onclick="arthemeticfunction('div')">/</button>
+    <button type="button" onclick="arthemeticfunction('rem')">%</button><br>
+    <code><output class="outputmath"></output></code>
+    <script type="module" src="js-conditions.js"></script>
+    <script>
+        const inputOne = document.getElementById("inputNumone");
+        const inputTwo = document.getElementById("inputNumtwo");
+        const output = document.getElementsByClassName("outputmath")[0];
+        function arthemeticfunction(method) {
+            let numOne=inputOne.value;
+            let numTwo=inputTwo.value;
+            
+            method === "sum" ?
+                output.textContent = `${numOne} + ${numTwo} = ${parseInt(numOne) + parseInt(numTwo)}`:
+            method === "sub" ?
+                output.textContent = `${numOne} - ${numTwo} = ${parseInt(numOne) - parseInt(numTwo)}`:
+            method === "div" ?
+                output.textContent = `${numOne} / ${numTwo} = ${parseInt(numOne) / parseInt(numTwo)}`:
+                output.textContent = `${numOne} % ${numTwo} = ${parseInt(numOne) % parseInt(numTwo)}`
+               
+        }
+    </script>
+</body>
+
+</html>
